@@ -68,10 +68,11 @@ h1 {
     display: flex;
     align-items: inherit;
     justify-content: inherit;
+    height: 45px;
+    width: 45px;
+    padding-top: 4px;
 
     &:hover {
-      height: 45px;
-      width: 45px;
       background-color: #00000028;
       border-radius: 50%;
 
