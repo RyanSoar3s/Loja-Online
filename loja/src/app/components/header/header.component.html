@@ -1,10 +1,21 @@
 <header>
   <div class="container-header-elements">
-    <h1>Loja Online</h1>
+    @if (!showCloseButton) {
+      <h1>Loja Online</h1>
+
+    }
 
     <div class="search-bar">
-      <input type="text" placeholder="pesquisar por produto...">
-      <button type="submit">
+      @if (showSearchBar) {
+        <input type="text" placeholder="pesquisar por produto...">
+
+      }
+
+      <button type="submit" [ngStyle]="{
+      'background-color': (showSearchBar) ? 'var(--bg-color-button-header)' : 'transparent',
+      'border': (showSearchBar) ? '2px solid var(--border-color-button-header)' : 'none'
+
+      }" (click)="submit()">
         <fa-icon [icon]="faMagnifyingGlass" style="color: white;"></fa-icon>
 
       </button>
@@ -13,8 +24,12 @@
 
     <div class="shopping-cart">
       <div class="shopping-cart-icon">
-        <fa-icon [icon]="faShoppingCart" style="color: white;"></fa-icon>
-        
+        <fa-icon [icon]="faShoppingCart" style="color: white;" [ngStyle]="{ 'display': (!showCloseButton) ? 'block' : 'none', 'color': 'whote' }"></fa-icon>
+        <fa-icon [icon]="faXmark" [ngStyle]="{
+        'display': (showCloseButton) ? 'block' : 'none', 'color': 'black', 'font-size': '2.0em'
+
+        }" (click)="close()"></fa-icon>
+
       </div>
 
     </div>
