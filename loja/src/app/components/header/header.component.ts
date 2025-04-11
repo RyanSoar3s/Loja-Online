@@ -64,7 +64,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
       }
       else if (state.breakpoints[this.SMALL]) {
-        this.width_search_bar = "60%";
+        this.width_search_bar = "45%";
         this.font_size_h1 = "1.5em";
 
       }
