@@ -96,18 +96,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.showSearchBar = !this.showSearchBar;
       this.showCloseButton = !this.showCloseButton;
       this.width_search_bar_style = "87%";
+      return;
 
     }
 
   }
 
   close(): void {
-    if (this.showSearchBar) {
-      this.showSearchBar = !this.showSearchBar;
-      this.showCloseButton = !this.showCloseButton;
-      this.width_search_bar_style = this.width_search_bar;
-
-    }
+    this.showSearchBar = !this.showSearchBar;
+    this.showCloseButton = !this.showCloseButton;
+    this.width_search_bar_style = this.width_search_bar;
 
   }
 
