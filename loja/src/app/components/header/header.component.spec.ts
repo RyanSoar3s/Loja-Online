@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
 import { ResponsiveService } from '../../services/responsive.service';
 
-import {  Observable, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { BreakpointState } from '@angular/cdk/layout';
 
 describe('HeaderComponent', () => {
@@ -36,17 +36,6 @@ describe('HeaderComponent', () => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  afterEach(() => {
-    Object.defineProperty(window, 'innerWidth', {
-      writable: true,
-      configurable: true,
-      value: 1200
-
-    });
-    fixture.detectChanges();
-
   });
 
   it('should click on button', () => {
