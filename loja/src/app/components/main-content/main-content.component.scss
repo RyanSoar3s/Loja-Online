@@ -77,18 +77,21 @@ main {
 
 .container-categories-promos {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 80px;
+  justify-content: flex-start;
+  height: 145px;
   width: 100%;
   margin-top: 30px;
 
   ul {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
     list-style: none;
-    width: 680px;
+    width: var(--width-ul-container-categories-promos-main);
 
   }
 

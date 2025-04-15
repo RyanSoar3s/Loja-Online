@@ -7,13 +7,20 @@
 
   --font-size-h1-header: 2.4em;
   --width-search-bar-header: 70%;
-  
+
+  --width-ul-container-categories-promos-main: 680px
+
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+}
+
+html, body {
+  overflow-x: hidden;
 
 }
 
