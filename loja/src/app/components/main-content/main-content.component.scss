@@ -1,0 +1,114 @@
+main {
+  height: 80vh;
+  width: 100vw;
+  margin-top: 50px;
+
+}
+
+.container-carousel-promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+
+  .container-carousel {
+    height: 100%;
+    width: 54%;
+    overflow: hidden;
+
+  }
+
+}
+
+.carousel {
+  display: flex;
+  height: 100%;
+  width: 300%;
+
+  .promo {
+    height: 100%;
+    width: 100%;
+
+  }
+
+}
+
+.promo-1 {
+  background-color: red;
+
+}
+
+.promo-2 {
+  background-color: green;
+
+}
+
+.promo-3 {
+  background-color: blue;
+
+}
+
+.buttons {
+  display: flex;
+  position: relative;
+  align-self: flex-end;
+  justify-content: center;
+  width: 100%;
+  top: -30px;
+  gap: 10px;
+
+  input[type="radio"] {
+    all: unset;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #00000081;
+    border-radius: 50%;
+    cursor: pointer;
+
+  }
+
+  input[type="radio"]:checked {
+    background-color: #ff4828;
+
+  }
+
+}
+
+.container-categories-promos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  margin-top: 30px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    width: 680px;
+
+  }
+
+}
+
+button {
+  height: 30px;
+  width: 120px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 1px 1px 3px 0px #00000081;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ff4828;
+    color: white;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+}

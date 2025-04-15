@@ -1,0 +1,63 @@
+<main>
+  <div ngClass="container-carousel-promo">
+    <div [ngClass]="'container-carousel'">
+      <div #carousel ngClass="carousel">
+        <div [ngClass]="'promo promo-1'"></div>
+        <div [ngClass]="'promo promo-2'"></div>
+        <div [ngClass]="'promo promo-3'"></div>
+
+      </div>
+      <div class="buttons">
+        <input #radio checked type="radio" name="radio" id="radio1" (click)="changeCarousel(0)">
+        <input #radio type="radio" name="radio" id="radio2" (click)="changeCarousel(1)">
+        <input #radio type="radio" name="radio" id="radio3" (click)="changeCarousel(2)">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container-categories-promos">
+    <ul>
+      <li>
+        <button>
+          <fa-icon [icon]="faDollar"></fa-icon> Pontos
+
+        </button>
+
+      </li>
+      <li>
+        <button>
+          <fa-icon [icon]="faTicket"></fa-icon> Cupons
+
+        </button>
+
+      </li>
+      <li>
+        <button>
+          <fa-icon [icon]="faTruckFast"></fa-icon> Frete Grátis
+
+        </button>
+
+      </li>
+      <li>
+        <button>
+          <fa-icon [icon]="faGift"></fa-icon> Prêmios
+
+        </button>
+
+      </li>
+      <li>
+        <button>
+          <fa-icon [icon]="faShop"></fa-icon> Nossas lojas
+
+        </button>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+</main>
