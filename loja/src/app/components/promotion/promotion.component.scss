@@ -1,0 +1,119 @@
+.container-carousel-promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+
+  .container-carousel {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+
+  }
+
+}
+
+.carousel {
+  display: flex;
+  height: 100%;
+  width: 300%;
+
+  .promo {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+
+  }
+
+}
+
+.promo-1 {
+  background-color: #ff4828;
+  background-image: url("../../../assets/promotions/Week-Promo.png");
+
+}
+
+.promo-2 {
+  background-color: #f86843;
+  background-image: url("../../../assets/promotions/TV-Promo.png");
+
+}
+
+.promo-3 {
+  background-color: #c51b0f;
+  background-image: url("../../../assets/promotions/Refrigerator-Promo.png");
+
+}
+
+
+.buttons {
+  display: flex;
+  position: relative;
+  align-self: flex-end;
+  justify-content: center;
+  width: 100%;
+  top: -30px;
+  gap: 10px;
+
+  input[type="radio"] {
+    all: unset;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #00000081;
+    border-radius: 50%;
+    cursor: pointer;
+
+  }
+
+  input[type="radio"]:checked {
+    background-color: #fd8844;
+
+  }
+
+}
+
+.container-categories-promos {
+  display: flex;
+  flex-direction: column;
+  align-items: var(--align-items-container-categories-promos-main);
+  justify-content: flex-start;
+  height: 40px;
+  width: 100%;
+  margin-top: 30px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    width: 800px;
+
+  }
+
+}
+
+button {
+  height: 30px;
+  width: 120px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 1px 1px 3px 0px #00000081;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ff4828;
+    color: white;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+}
