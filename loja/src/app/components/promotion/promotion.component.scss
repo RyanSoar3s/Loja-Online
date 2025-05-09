@@ -1,55 +1,80 @@
-.container-carousel-promo {
+$color-promo-title-h1: #ff2500;
+$bg-color-promo-1: #ff4828;
+$bg-color-promo-2: #f86843;
+$bg-color-promo-3: #c51b0f;
+
+$border-input-radio: 2px solid #00000081;
+$bg-color-input-radio: #fd8844;
+
+$box-shadow-button: 1px 1px 3px 0px #00000081;
+$bg-color-hover-button: #ff4828;
+
+:host {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 300px;
+  justify-content: space-between;
+  height: 400px;
   width: 100%;
 
-  .container-carousel {
-    height: 100%;
-    width: 50%;
-    overflow: hidden;
+}
+
+.promo-title {
+  margin-left: 30px;
+  align-self: flex-start;
+
+  h1 {
+    color: $color-promo-title-h1;
+    font-size: 2.1em;
+    font-weight: 800;
 
   }
 
 }
 
-.carousel {
-  display: flex;
-  height: 100%;
-  width: 300%;
+.container-carousel {
+  height: 242px;
+  width: 50%;
+  overflow: hidden;
 
-  .promo {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  .container-carousel__carousel {
+    display: flex;
     height: 100%;
-    width: 100%;
+    width: 300%;
+
+    .container-carousel__promo {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+
+    }
 
   }
 
 }
 
-.promo-1 {
-  background-color: #ff4828;
-  background-image: url("../../../assets/promotions/Week-Promo.png");
+.container-carousel__promo-1 {
+  background-color: $bg-color-promo-1;
+  background-image: url("../../../assets/promotions/Week-Promo.webp");
 
 }
 
-.promo-2 {
-  background-color: #f86843;
-  background-image: url("../../../assets/promotions/TV-Promo.png");
+.container-carousel__promo-2 {
+  background-color: $bg-color-promo-2;
+  background-image: url("../../../assets/promotions/TV-Promo.webp");
 
 }
 
-.promo-3 {
-  background-color: #c51b0f;
+.container-carousel__promo-3 {
+  background-color: $bg-color-promo-3;
   background-image: url("../../../assets/promotions/Refrigerator-Promo.png");
 
 }
 
 
-.buttons {
+.container-carousel__buttons {
   display: flex;
   position: relative;
   align-self: flex-end;
@@ -62,14 +87,14 @@
     all: unset;
     width: 17px;
     height: 17px;
-    border: 2px solid #00000081;
+    border: $border-input-radio;
     border-radius: 50%;
     cursor: pointer;
 
   }
 
   input[type="radio"]:checked {
-    background-color: #fd8844;
+    background-color: $bg-color-input-radio;
 
   }
 
@@ -104,13 +129,13 @@ button {
   width: 120px;
   border-radius: 20px;
   border: none;
-  box-shadow: 1px 1px 3px 0px #00000081;
+  box-shadow: $box-shadow-button;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
 
   &:hover {
-    background-color: #ff4828;
+    background-color: $bg-color-hover-button;
     color: white;
     transition: all 0.3s ease-in-out;
 
