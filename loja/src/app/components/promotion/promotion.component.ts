@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
 import {
   Component,
-  AfterViewInit,
-  ViewChild,
+  viewChild,
+  viewChildren,
   OnInit,
-  ViewChildren,
   OnDestroy,
   ElementRef,
   Renderer2,
@@ -35,10 +34,11 @@ import { Subscription } from 'rxjs';
   templateUrl: './promotion.component.html',
   styleUrl: './promotion.component.scss'
 })
-export class PromotionComponent implements OnInit, AfterViewInit, OnDestroy {
+export class PromotionComponent implements OnInit, OnDestroy {
   @HostBinding("style.--align-items-container-categories-promos-main") align_items_container_categories_promos_style!: string;
-  @ViewChild("carousel") carousel!: ElementRef;
-  @ViewChildren("radio", { read: ElementRef }) radio!: Array<ElementRef>;
+
+  private carousel = viewChild<ElementRef<HTMLElement>>("carousel");
+  private radio = viewChildren<string, ElementRef<HTMLElement> >("radio", { read: ElementRef });
 
   private readonly XSMALL = '(max-width: 599px)';
   private readonly SMALL = '(min-width: 600px) and (max-width: 749px)';
@@ -83,24 +83,17 @@ export class PromotionComponent implements OnInit, AfterViewInit, OnDestroy {
 
       }
 
-
-
-    })
-
-  }
-
-  ngAfterViewInit(): void {
-    this.scroollCarousel();
-
+    });
+   this.scroollCarousel();
   }
 
   scroollCarousel(): void {
-    const carousel = this.carousel.nativeElement;
+    const carousel = this.carousel()?.nativeElement as HTMLElement;
 
     setInterval(() => {
       if (this.posX > 2) this.posX = 0;
 
-      this.radio.forEach((radio: ElementRef, index: number) => {
+      this.radio().forEach((radio: ElementRef<HTMLElement>, index: number) => {
         if (index === this.posX) {
           this.renderer.setProperty(radio.nativeElement, 'checked', true);
 
@@ -121,11 +114,12 @@ export class PromotionComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   changeCarousel(index: number): void {
-    this.posX = Number(index);
+    this.posX = index;
+    console.log(this.posX)
 
-    const carousel = this.carousel.nativeElement;
+    const carousel = this.carousel()?.nativeElement as HTMLElement;
+
     this.renderer.setStyle(carousel, 'transform', `translateX(calc(${this.posX++} * (-33.34%)))`);
-
 
   }
 
