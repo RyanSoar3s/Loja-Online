@@ -1,11 +1,22 @@
-header {
+:host {
+  display: flex;
   background-color: var(--bg-color-header);
+  justify-content: center;
   height: 120px;
   width: 100vw;
 
 }
 
-h1 {
+.header-elements {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+
+}
+
+.header-elements__title h1 {
   color: white;
   font-size: var(--font-size-h1-header);
   font-weight: 800;
@@ -13,16 +24,7 @@ h1 {
 
 }
 
-.container-header-elements {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0px 20px;
-
-}
-
-.search-bar {
+.header-elements__search-bar {
   display: flex;
   height: 100%;
   width: var(--width-search-bar-header);
@@ -60,20 +62,20 @@ h1 {
 
 }
 
-.container-icons {
+.header-elements__container-icons {
   display: flex;
   align-items: center;
   height: 100%;
 
 }
 
-.container-shopping-cart, .container-user {
+.header-elements__shopping-cart, .header-elements__container-user {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
 
-  .icon {
+  .header-elements__icon {
     display: flex;
     flex-direction: column;
     align-items: inherit;

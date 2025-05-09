@@ -1,44 +1,44 @@
-<header>
-  <div class="container-header-elements">
-    @if (!showCloseButton) {
+<div ngClass="header-elements">
+  @if (!showCloseButton) {
+    <div ngClass="header-elements__title">
       <h1>Loja Online</h1>
-
-    }
-
-    <div class="search-bar">
-      @if (showSearchBar) {
-        <input type="text" placeholder="pesquisar por produto...">
-
-      }
-
-      <button type="submit" [ngStyle]="{
-      'background-color': (showSearchBar) ? 'var(--bg-color-button-header)' : 'transparent',
-      'border': (showSearchBar) ? '2px solid var(--border-color-button-header)' : 'none'
-
-      }" (click)="submit()">
-        <fa-icon [icon]="faMagnifyingGlass" style="color: white;"></fa-icon>
-
-      </button>
 
     </div>
 
-    <div class="container-icons" [ngStyle]="{ 'justifyContent': (!showCloseButton) ? 'space-between' : 'flex-end', 'width': (!showSearchBar) ? '24%' : '12%' }">
-      <div class="container-shopping-cart" [ngStyle]="{ 'width': (!showCloseButton) ? '55px' : '42px' }">
-        <div class="icon">
-          <fa-icon [icon]="faShoppingCart" [ngStyle]="{ 'color': 'white', 'display': (!showCloseButton) ? 'block' : 'none' }"></fa-icon>
-          <fa-icon [icon]="faXmark" [ngStyle]="{
-          'display': (showCloseButton) ? 'block' : 'none', 'color': 'black', 'font-size': '2.0em'
-          }" (click)="close()"></fa-icon>
+  }
 
-        </div>
+  <div ngClass="header-elements__search-bar">
+    @if (showSearchBar) {
+      <input [type]="'text'" [placeholder]="'pesquisar por produto...'">
+
+    }
+
+    <button [type]="'submit'" [ngStyle]="{
+    'background-color': (showSearchBar) ? 'var(--bg-color-button-header)' : 'transparent',
+    'border': (showSearchBar) ? '2px solid var(--border-color-button-header)' : 'none'
+
+    }" (click)="submit()">
+      <fa-icon [icon]="faMagnifyingGlass" style="color: white;"></fa-icon>
+
+    </button>
+
+  </div>
+
+  <div ngClass="header-elements__container-icons" [ngStyle]="{ 'justifyContent': (!showCloseButton) ? 'space-around' : 'flex-end', 'width': (!showSearchBar) ? '24%' : '13%' }">
+    <div ngClass="header-elements__shopping-cart" [ngStyle]="{ 'width': (!showCloseButton) ? '55px' : '42px' }">
+      <div ngClass="header-elements__icon">
+        <fa-icon [icon]="faShoppingCart" [ngStyle]="{ 'color': 'white', 'display': (!showCloseButton) ? 'block' : 'none' }"></fa-icon>
+        <fa-icon [icon]="faXmark" [ngStyle]="{
+        'display': (showCloseButton) ? 'block' : 'none', 'color': 'black', 'font-size': '2.0em'
+        }" (click)="close()"></fa-icon>
 
       </div>
 
-      <div class="container-user" [ngStyle]="{ 'display': (!showCloseButton) ? 'flex' : 'none' }">
-        <div class="icon">
-          <fa-icon [icon]="faUser" [ngStyle]="{ 'color': 'white' }"></fa-icon>
+    </div>
 
-        </div>
+    <div ngClass="header-elements__container-user" [ngStyle]="{ 'display': (!showCloseButton) ? 'flex' : 'none' }">
+      <div ngClass="header-elements__icon">
+        <fa-icon [icon]="faUser" [ngStyle]="{ 'color': 'white' }"></fa-icon>
 
       </div>
 
@@ -46,4 +46,4 @@
 
   </div>
 
-</header>
+</div>
