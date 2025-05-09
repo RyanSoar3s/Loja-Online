@@ -1,60 +1,64 @@
-<div ngClass="container-carousel-promo">
-  <div [ngClass]="'container-carousel'">
-    <div #carousel ngClass="carousel">
-      <div [ngClass]="'promo promo-1'"></div>
-      <div [ngClass]="'promo promo-2'"></div>
-      <div [ngClass]="'promo promo-3'"></div>
+<div ngClass="promo-title">
+  <h1>Veja Nossas Promoções</h1>
 
-    </div>
-    <div class="buttons">
-      <input #radio checked type="radio" name="radio" id="radio1" (click)="changeCarousel(0)">
-      <input #radio type="radio" name="radio" id="radio2" (click)="changeCarousel(1)">
-      <input #radio type="radio" name="radio" id="radio3" (click)="changeCarousel(2)">
+</div>
 
-    </div>
+<div [ngClass]="'container-carousel'">
+  <div #carousel ngClass="container-carousel__carousel">
+    <div [ngClass]="'container-carousel__promo container-carousel__promo-1'"></div>
+    <div [ngClass]="'container-carousel__promo container-carousel__promo-2'"></div>
+    <div [ngClass]="'container-carousel__promo container-carousel__promo-3'"></div>
+
+  </div>
+  <div ngClass="container-carousel__buttons">
+    <input #radio [checked]="true" [type]="'radio'" [name]="'radio'" [id]="'radio1'" (click)="changeCarousel(0)">
+    <input #radio [type]="'radio'" [name]="'radio'" [id]="'radio2'" (click)="changeCarousel(1)">
+    <input #radio [type]="'radio'" [name]="'radio'" [id]="'radio3'" (click)="changeCarousel(2)">
 
   </div>
 
 </div>
 
-<div class="container-categories-promos">
-  <ul>
-    <li>
-      <button>
-        <fa-icon [icon]="faDollar"></fa-icon> Pontos
+<div ngClass="container-categories-promos">
+<ul>
+  <li>
+    <button>
+      <fa-icon [icon]="faDollar"></fa-icon> Pontos
 
-      </button>
+    </button>
 
-    </li>
-    <li>
-      <button>
-        <fa-icon [icon]="faTicket"></fa-icon> Cupons
+  </li>
 
-      </button>
+  <li>
+    <button>
+      <fa-icon [icon]="faTicket"></fa-icon> Cupons
 
-    </li>
-    <li>
-      <button>
-        <fa-icon [icon]="faTruckFast"></fa-icon> Frete Grátis
+    </button>
 
-      </button>
+  </li>
 
-    </li>
-    <li>
-      <button>
-        <fa-icon [icon]="faGift"></fa-icon> Prêmios
+  <li>
+    <button>
+      <fa-icon [icon]="faTruckFast"></fa-icon> Frete Grátis
 
-      </button>
+    </button>
 
-    </li>
-    <li>
-      <button>
-        <fa-icon [icon]="faShop"></fa-icon> Nossas Lojas
+  </li>
 
-      </button>
+  <li>
+    <button>
+      <fa-icon [icon]="faGift"></fa-icon> Prêmios
 
-    </li>
+    </button>
 
-  </ul>
+  </li>
 
-</div>
+  <li>
+    <button>
+      <fa-icon [icon]="faShop"></fa-icon> Nossas Lojas
+
+    </button>
+
+  </li>
+
+</ul>
