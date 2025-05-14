@@ -21,7 +21,7 @@ import {
 
 } from '@fortawesome/free-solid-svg-icons';
 
-import { ResponsiveService } from '../../services/responsive.service';
+import { ResponsiveService } from '@services/responsive.service';
 import { Subscription } from 'rxjs';
 
 @Component({
