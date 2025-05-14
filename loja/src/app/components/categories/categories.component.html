@@ -1,0 +1,39 @@
+<div ngClass="categories-title">
+  <h1>Categorias</h1>
+
+</div>
+
+<div ngClass="categories">
+  <div ngClass="categories__items">
+   <div ngClass="categories__items--wrapper">
+      @for (title of titles; track index; let index = $index) {
+        <div ngClass="categories__item">
+          <div [attr.data-categorie]="'item-' + index" ngClass="categories__img"></div>
+
+          <div ngClass="categories__title">
+            <h2>{{ title }}</h2>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+  <div ngClass="categories__arrows">
+    <div ngClass="categories__arrow--left" (click)="moveCarousel('left')">
+      <fa-icon [icon]="faCircleArrowLeft"></fa-icon>
+
+    </div>
+
+    <div ngClass="categories__arrow--right" (click)="moveCarousel('right')">
+      <fa-icon [icon]="faCircleArrowRight"></fa-icon>
+
+    </div>
+
+  </div>
+
+</div>

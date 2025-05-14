@@ -1,0 +1,169 @@
+@use 'sass:list';
+
+$border-host: 5px solid #f01919;
+$color-grid-categories-title: #FF2500;
+$color-fa-icon: #FF2500;
+$border-bottom-categories-title: 3px solid #FF2500;
+$box-shadow-categories: 3px 3px 5px 1px #0000001f;
+
+$img-paths: (
+            "../../../assets/categories/clothes/male/men's-shirt-img1.jpg",
+            "../../../assets/categories/clothes/female/women's-shorts-img1.webp",
+            "../../../assets/categories/technologies/pc-gamer/pc-gamer-img1.jpg",
+            "../../../assets/categories/ accessories/ watches/ watche-img1.webp",
+            "../../../assets/categories/technologies/smartphone/smartphone-img1.jpg",
+            "../../../assets/categories/technologies/playstation/playstation-2-img1.jpg"
+
+            );
+
+:host {
+  --transtale-x: 0%;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 500px;
+  width: 100vw;
+  margin-top: 100px;
+  border-top: $border-host;
+  border-bottom: $border-host;
+  box-shadow: inset 1px 1px 5px #00000083;
+  padding-top: 30px;
+
+}
+
+.categories-title {
+  background-color: white;
+  color: $color-grid-categories-title;
+  margin-left: 30px;
+  height: 50px;
+  width: 210px;
+  align-content: center;
+  text-align: center;
+  border-bottom: $border-bottom-categories-title;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  h1 {
+    font-size: 1.8em;
+
+  }
+
+}
+
+.categories {
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  height: 70%;
+  width: var(--width-categories-categories);
+  border-radius: 15px;
+  box-shadow: $box-shadow-categories;
+
+}
+
+.categories__items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: var(--padding-left-categories__items-categories);
+  width: var(--width-categories__items-categories);
+  overflow: hidden;
+
+  .categories__items--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 52px;
+    height: 330px;
+    width: auto;
+    transition: transform .5s ease;
+    scroll-behavior: smooth;
+    transform: translateX(var(--transtale-x));
+
+    .categories__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      width: var(--width-categories__item-categories);
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform .5s ease;
+
+      &:hover {
+        transform: scale(1.05);
+
+      }
+
+      .categories__img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: var(--height-categories__img-categories);
+        width: var(--width-categories__img-categories);
+        margin-bottom: 20px;
+        border-radius: 20px;
+        padding: 3px;
+        
+        @for $i from 1 to list.length($img-paths) + 1 {
+          &[data-categorie="item-#{$i - 1}"] {
+            background-image: url(list.nth($img-paths, $i));
+
+          }
+
+        }
+
+      }
+
+      .categories__title h2 {
+        font-size: 24px;
+        font-weight: 800;
+        font-variant: small-caps;
+        text-align: center;
+
+      }
+
+    }
+
+  }
+
+}
+
+.categories__arrows {
+  position: absolute;
+  top: 45%;
+  height: 0px;
+  width: var(--width-categories__arrows-categories);
+  cursor: pointer;
+
+  .categories__arrow--right {
+    position: relative;
+    float: right;
+    top: -54px;
+
+  }
+
+  .categories__arrow--right, .categories__arrow--left {
+    width: 48px;
+    transition: transform .5s ease;
+
+    &:hover {
+      transform: scale(1.2);
+
+    }
+
+  }
+
+  fa-icon {
+    color: $color-fa-icon;
+    font-size: 2.8em;
+
+  }
+
+}
