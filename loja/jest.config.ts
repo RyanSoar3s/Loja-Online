@@ -10,6 +10,12 @@ const config: Config = {
     "ts",
     "js"
   ],
+  moduleNameMapper: {
+    "@components/(.*)": "<rootDir>/src/app/components/$1",
+    "@services/(.*)": "<rootDir>/src/app/services/$1",
+    "@models/(.*)": "<rootDir>/src/app/models/$1"
+
+  },
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   testEnvironment: "jsdom",
   verbose: true,
