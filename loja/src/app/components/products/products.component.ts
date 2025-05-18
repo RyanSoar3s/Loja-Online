@@ -55,7 +55,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.sub = this.responsive$.onBreakpointChange().subscribe((state) => {
       if (state.breakpoints[this.XSMALL]) {
         this.qtd_products_shown = 6;
-        this.width_product_wrapper_products = "400px";
+        this.width_product_wrapper_products = "390px";
         this.font_size_products_wrapper__h1_products = "1.9em";
         this.grid_template_columns_wrapper__products_products = "repeat(2, 1fr)";
         this.height_product_wrapper__product_products = "250px";
