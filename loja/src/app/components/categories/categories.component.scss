@@ -10,7 +10,7 @@ $img-paths: (
             "../../../assets/categories/clothes/male/men's-shirt-img1.jpg",
             "../../../assets/categories/clothes/female/women's-shorts-img1.webp",
             "../../../assets/categories/technologies/pc-gamer/pc-gamer-img1.jpg",
-            "../../../assets/categories/ accessories/ watches/ watche-img1.webp",
+            "../../../assets/categories/accessories/watches/watche-img1.webp",
             "../../../assets/categories/technologies/smartphone/smartphone-img1.jpg",
             "../../../assets/categories/technologies/playstation/playstation-2-img1.jpg"
 
@@ -110,7 +110,7 @@ $img-paths: (
         margin-bottom: 20px;
         border-radius: 20px;
         padding: 3px;
-        
+
         @for $i from 1 to list.length($img-paths) + 1 {
           &[data-categorie="item-#{$i - 1}"] {
             background-image: url(list.nth($img-paths, $i));
