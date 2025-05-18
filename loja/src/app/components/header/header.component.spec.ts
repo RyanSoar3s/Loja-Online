@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
-import { ResponsiveService } from '../../services/responsive.service';
+import { ResponsiveService } from '@services/responsive.service';
 
 import { Observable, of } from 'rxjs';
 import { BreakpointState } from '@angular/cdk/layout';
@@ -55,7 +55,7 @@ describe('HeaderComponent', () => {
     component.ngOnInit();
     expect(component.showSearchBar).toBeFalsy();
 
-    const inputElement = fixture.nativeElement.querySelector('.search-bar button[type="submit"]');
+    const inputElement = fixture.nativeElement.querySelector('.header-elements__search-bar button[type="submit"]');
     inputElement.click();
     fixture.detectChanges();
 
