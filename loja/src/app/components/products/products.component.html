@@ -1,0 +1,39 @@
+<div ngClass="product-wrapper">
+  <div ngClass="product-wrapper__title">
+    <h1>Veja Nossos Produtos</h1>
+
+  </div>
+
+  <div ngClass="product-wrapper__products">
+    @for(product of products_info; track $index) {
+      <div ngClass="product-wrapper__product">
+        <div ngClass="product-wrapper__img">
+          <img [src]="product.images[0]" [alt]="product.title">
+
+        </div>
+
+        <div ngClass="product-wrapper__info">
+          <div ngClass="product-wrapper__desc">
+            <p>{{ product.description }}</p>
+
+          </div>
+
+          <div ngClass="product-wrapper__price">
+            <h3>R$<span>{{ product.price }}</span></h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+  <div ngClass="product-wrapper__button" [ngStyle]="{ 'display': (!showedAllProducts) ? 'block' : 'none' }">
+    <button (click)="showNextProducts()">Ver Mais</button>
+
+  </div>
+
+</div>
