@@ -17,7 +17,7 @@ import {
   faTicket,
   faTruckFast,
   faGift,
-  faShop
+  faCartShopping
 
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -49,7 +49,7 @@ export class PromotionComponent implements OnInit, OnDestroy {
   protected faTicket = faTicket;
   protected faTruckFast = faTruckFast;
   protected faGift = faGift;
-  protected faShop = faShop;
+  protected faCartShopping = faCartShopping;
 
   private posX: number = 1;
   private sub!: Subscription

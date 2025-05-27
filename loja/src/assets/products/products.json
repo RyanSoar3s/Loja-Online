@@ -2,104 +2,103 @@
   {
     "watches": {
       "title": "Relógios Masculinos de Luxo",
+      "category": "Acessórios",
+      "tags": ["relógios", "luxo", "masculino", "elegância", "funcionalidade"],
       "images": [
         "assets/categories/accessories/watches/watche-img1.webp",
         "assets/categories/accessories/watches/watche-img2.webp",
         "assets/categories/accessories/watches/watche-img3.jpg"
-
       ],
       "price": 170.15,
       "description": "Eleve o seu estilo com nossos relógios masculinos de luxo, projetados para homens modernos e sofisticados. Este modelo combina elegância e funcionalidade, perfeito para ocasiões especiais ou para o uso diário. Fabricado com materiais de alta qualidade, apresenta um design atemporal e resistente. Disponível em acabamentos refinados, este relógio é a escolha ideal para quem valoriza a precisão e o estilo."
-
     },
     "alliances": {
       "title": "Alianças de Casamento em Ouro",
+      "category": "Acessórios",
+      "tags": ["alianças", "casamento", "ouro", "amor", "elegância"],
       "images": [
         "assets/categories/accessories/alliances/alliance-img1.jpg",
         "assets/categories/accessories/alliances/alliance-img2.jpg"
-
       ],
       "price": 200.0,
       "description": "Celebre o amor com nossas alianças de casamento em ouro, projetadas para durar uma vida inteira. Design clássico e sofisticado, perfeito para momentos inesquecíveis."
-
     },
     "bracelets": {
       "title": "Pulseiras Elegantes",
+      "category": "Acessórios",
+      "tags": ["pulseiras", "elegância", "estilo", "qualidade", "sofisticação"],
       "images": [
         "assets/categories/accessories/bracelets/bracelet-img1.webp",
         "assets/categories/accessories/bracelets/bracelet-img2.webp"
-
       ],
       "price": 120.0,
       "description": "Nossas pulseiras elegantes são ideais para adicionar um toque de estilo e sofisticação ao seu visual. Feitas com materiais de alta qualidade para um acabamento impecável."
-
     },
     "necklaces": {
       "title": "Colar Vintage com Pingente de Coração e Pedra Vermelha",
+      "category": "Acessórios",
+      "tags": ["colar", "vintage", "pingente", "pedra vermelha", "sofisticação"],
       "images": [
         "assets/categories/accessories/necklaces/necklace-img1.jpg",
         "assets/categories/accessories/necklaces/necklace-img2.jpg"
-
       ],
       "price": 150.0,
       "description": "Encante-se com este colar vintage elegante, que combina um pingente em formato de coração com uma pedra vermelha translúcida de brilho intenso. Feito em metal de tom bronzeado, o design possui detalhes ornamentais delicados que realçam seu estilo clássico e sofisticado. A corrente longa complementa perfeitamente o pingente, tornando esta peça ideal para ocasiões especiais ou para adicionar um toque único ao seu visual cotidiano."
-
     },
     "womenshirt": {
       "title": "Camiseta Femininas de Bandas e Animes",
+      "category": "Roupas Femininas",
+      "tags": ["camiseta", "feminina", "bandas", "animes", "estilo"],
       "images": [
         "assets/categories/clothes/female/women's-shirt-img1.webp",
         "assets/categories/clothes/female/women's-shirt-img2.webp"
-
       ],
       "price": 40.0,
       "description": "Expresse seu estilo e paixão com nossas camisetas femininas exclusivas de bandas e animes! Feitas com tecido macio e de alta qualidade, elas oferecem conforto e durabilidade para o dia a dia. Disponíveis em diversos tamanhos e estampas vibrantes que homenageiam suas bandas favoritas e animes icônicos, estas camisetas são perfeitas para compor looks descolados e modernos. Ideal para fãs que desejam mostrar seu gosto único com personalidade e atitude."
-
     },
     "womenshort": {
       "title": "Shorts Femininos Estilosos",
+      "category": "Roupas Femininas",
+      "tags": ["shorts", "feminino", "moda", "conforto", "estilo"],
       "images": [
         "assets/categories/clothes/female/women's-shorts-img1.webp",
         "assets/categories/clothes/female/women's-shorts-img2.webp"
-
       ],
       "price": 55.70,
       "description": "Shorts femininos estilosos e confortáveis, perfeitos para os dias quentes. Combine com várias peças para um visual despojado e moderno."
-
     },
     "womensweatshirt": {
       "title": "Moletom Feminino Confortável",
+      "category": "Roupas Femininas",
+      "tags": ["moletom", "feminino", "conforto", "casual", "moderno"],
       "images": [
         "assets/categories/clothes/female/women's-sweatshirt-img1.webp"
-
       ],
       "price": 60.0,
-
       "description": "Moletom feminino confortável com design moderno. Perfeito para dias mais frios e ocasiões casuais."
-
     },
     "menshirt": {
       "title": "Camisas Masculinas",
+      "category": "Roupas Masculinas",
+      "tags": ["camisa", "masculino", "casual", "conforto", "estilo"],
       "images": [
         "assets/categories/clothes/male/men's-shirt-img1.jpg",
         "assets/categories/clothes/male/men's-shirt-img2.jpg",
         "assets/categories/clothes/male/men's-shirt-img3.jpg"
-
       ],
       "price": 45.0,
       "description": "Camisa masculina com bom tecido, ideal para um estilo casual e confortável. Disponível em várias cores e tamanhos."
-
     },
     "menshort": {
       "title": "Shorts Masculinos Versáteis",
+      "category": "Roupas Masculinas",
+      "tags": ["shorts", "masculino", "conforto", "lazer", "praticidade"],
       "images": [
         "assets/categories/clothes/male/men's-shorts-img1.jpg",
         "assets/categories/clothes/male/men's-shorts-img2.jpg"
-
       ],
       "price": 40.0,
       "description": "Shorts masculinos versáteis e confortáveis, ideais para momentos de lazer e atividades ao ar livre."
-
     },
     "laptop": {
       "title": "Notebook de Alta Performance",
@@ -107,11 +106,11 @@
         "assets/categories/technologies/laptops/laptop-img1.jpg",
         "assets/categories/technologies/laptops/laptop-img2.jpg",
         "assets/categories/technologies/laptops/laptop-img3.jpg"
-
       ],
       "price": 1500.67,
-      "description": "Notebook de alta performance, ideal para trabalho, estudo ou entretenimento. Equipado com tecnologia de última geração para uma experiência fluida."
-
+      "description": "Notebook de alta performance, ideal para trabalho, estudo ou entretenimento. Equipado com tecnologia de última geração para uma experiência fluida.",
+      "category": "Tecnologia",
+      "tags": ["notebook", "laptop", "jogos", "trabalho", "estudo"]
     },
     "pcgamer": {
       "title": "PC Gamer de Última Geração",
@@ -119,11 +118,11 @@
         "assets/categories/technologies/pc-gamer/pc-gamer-img1.jpg",
         "assets/categories/technologies/pc-gamer/pc-gamer-img2.jpg",
         "assets/categories/technologies/pc-gamer/pc-gamer-img3.jpg"
-
       ],
       "price": 4500.0,
-      "description": "PC Gamer com hardware de ponta para máxima performance em jogos. Design moderno e sistemas otimizados para os jogadores mais exigentes."
-
+      "description": "PC Gamer com hardware de ponta para máxima performance em jogos. Design moderno e sistemas otimizados para os jogadores mais exigentes.",
+      "category": "Tecnologia",
+      "tags": ["pc gamer", "computador", "jogos", "hardware", "última geração"]
     },
     "playstation2": {
       "title": "Console Playstation 2",
@@ -131,133 +130,131 @@
         "assets/categories/technologies/playstation/playstation-2-img1.jpg",
         "assets/categories/technologies/playstation/playstation-2-img2.jpg",
         "assets/categories/technologies/playstation/playstation-2-img3.jpg"
-
       ],
       "price": 1450.0,
-      "description": "Console Playstation 2, um clássico que marcou gerações. Perfeito para quem busca nostalgia e diversão com jogos icônicos."
-
+      "description": "Console Playstation 2, um clássico que marcou gerações. Perfeito para quem busca nostalgia e diversão com jogos icônicos.",
+      "category": "Tecnologia",
+      "tags": ["console", "playstation", "jogos", "nostalgia", "diversão"]
     },
     "smartphone": {
       "title": "Smartphone Moderno e Potente",
       "images": [
         "assets/categories/technologies/smartphone/smartphone-img1.jpg",
         "assets/categories/technologies/smartphone/smartphone-img2.jpg"
-
       ],
       "price": 1200.55,
-      "description": "Smartphone moderno com design elegante e tecnologia avançada. Ideal para quem busca desempenho e estilo no dia a dia."
-
+      "description": "Smartphone moderno com design elegante e tecnologia avançada. Ideal para quem busca desempenho e estilo no dia a dia.",
+      "category": "Tecnologia",
+      "tags": ["smartphone", "celular", "moderno", "potente", "desempenho"]
     },
     "cabinet": {
       "title": "Armário de Madeira Branco",
       "images": [
         "assets/categories/furnitures/cabinet/white-wooden-cabinet-img1.jpg"
-
       ],
       "price": 350,
-      "description": "Armário elegante feito de madeira branca, com compartimentos como gavetas, portas e uma área específica para guardar taças."
-
+      "description": "Armário elegante feito de madeira branca, com compartimentos como gavetas, portas e uma área específica para guardar taças.",
+      "category": "Móveis",
+      "tags": ["armário", "madeira", "compartimentos", "elegante", "móveis"]
     },
     "doublebed": {
       "title": "Cama de Casal Estofada",
       "images": [
         "assets/categories/furnitures/double-bed/bed-img1.jpg",
         "assets/categories/furnitures/double-bed/bed-img2.jpg"
-
       ],
       "price": 1200,
-      "description": "Cama de casal espaçosa com design moderno, perfeita para uma noite confortável."
-
+      "description": "Cama de casal espaçosa com design moderno, perfeita para uma noite confortável.",
+      "category": "Móveis",
+      "tags": ["cama de casal", "estofada", "espaçosa", "confortável"]
     },
     "sofas": {
       "title": "Sofá Confortável",
       "images": [
         "assets/categories/furnitures/sofas/sofa-im1.jpg",
         "assets/categories/furnitures/sofas/sofa-img2.jpg"
-
       ],
       "price": 800,
-      "description": "Sofá confortável com um design moderno e funcional, ideal para qualquer ambiente."
-
+      "description": "Sofá confortável com um design moderno e funcional, ideal para qualquer ambiente.",
+      "category": "Móveis",
+      "tags": ["sofá", "confortável", "design moderno", "funcional", "móveis"]
     },
     "chess": {
       "title": "Tabuleiro de Xadrez",
       "images": [
         "assets/categories/games/chess/chessboard-img1.jpg",
         "assets/categories/games/chess/chessboard-img2.jpg"
-
       ],
       "price": 150,
-      "description": "Tabuleiro de xadrez de alta qualidade com peças detalhadas, perfeito para amantes do jogo."
-
+      "description": "Tabuleiro de xadrez de alta qualidade com peças detalhadas, perfeito para amantes do jogo.",
+      "category": "Jogos",
+      "tags": ["xadrez", "tabuleiro", "peças detalhadas", "jogo", "estratégia"]
     },
     "ludo": {
       "title": "Jogo de Ludo Clássico",
       "images": [
         "assets/categories/games/ludo/ludo-img1.jpg"
-
       ],
       "price": 50,
-      "description": "Jogo de Ludo clássico, diversão garantida para toda a família."
-
+      "description": "Jogo de Ludo clássico, diversão garantida para toda a família.",
+      "category": "Jogos",
+      "tags": ["ludo", "jogo", "clássico", "diversão", "família"]
     },
     "monopoly": {
       "title": "Jogo Monopoly",
       "images": [
         "assets/categories/games/monopoly/monopoly-img1.jpg",
         "assets/categories/games/monopoly/monopoly-img2.jpg"
-
       ],
       "price": 200,
-      "description": "Versão atualizada do clássico jogo de tabuleiro Monopoly."
-
+      "description": "Versão atualizada do clássico jogo de tabuleiro Monopoly.",
+      "category": "Jogos",
+      "tags": ["monopoly", "jogo de tabuleiro", "clássico", "estratégia", "família"]
     },
     "uno": {
       "title": "Cartas Uno",
       "images": [
         "assets/categories/games/uno/uno-img1.jpg",
         "assets/categories/games/uno/uno-img2.jpg"
-
       ],
-
       "price": 30,
-      "description": "Jogo de cartas Uno, fácil de aprender e ideal para todas as idades."
-
+      "description": "Jogo de cartas Uno, fácil de aprender e ideal para todas as idades.",
+      "category": "Jogos",
+      "tags": ["uno", "cartas", "jogo", "fácil", "todas as idades", "diversão"]
     },
     "refrigerator": {
       "title": "Geladeira Frost Free",
       "images": [
         "assets/categories/home-appliances/refrigerators/refrigerator-img1.png",
         "assets/categories/home-appliances/refrigerators/refrigerator-img2.png"
-
       ],
       "price": 2500,
-      "description": "Geladeira moderna com sistema frost free, capacidade para 450 litros."
-
+      "description": "Geladeira moderna com sistema frost free.",
+      "category": "Eletrodomésticos",
+      "tags": ["geladeira", "frost free", "eletrodomésticos", "espaçosa"]
     },
     "stove": {
       "title": "Fogão 4 Bocas",
       "images": [
         "assets/categories/home-appliances/stoves/stove-img1.png",
         "assets/categories/home-appliances/stoves/stove-img2.png"
-
       ],
       "price": 800,
-      "description": "Fogão 4 bocas com acendimento automático e forno espaçoso."
-
+      "description": "Fogão 4 bocas com acendimento automático e forno espaçoso.",
+      "category": "Eletrodomésticos",
+      "tags": ["fogão", "4 bocas", "acendimento automático", "forno espaçoso"]
     },
     "tv": {
       "title": "Smart TV 55'' 4K",
       "images": [
         "assets/categories/home-appliances/tvs/tv-img1.jpg",
         "assets/categories/home-appliances/tvs/tv-img2.jpg"
-
       ],
       "price": 3200,
-      "description": "Smart TV de 55 polegadas com resolução 4K e acesso a aplicativos de streaming."
-
+      "description": "Smart TV de 55 polegadas com resolução 4K e acesso a aplicativos de streaming.",
+      "category": "Eletrodomésticos",
+      "tags": ["smart tv", "4k", "55 polegadas", "streaming", "televisão"]
     }
-
   }
 
 ]

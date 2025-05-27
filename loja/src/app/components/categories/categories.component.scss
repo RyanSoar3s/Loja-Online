@@ -1,10 +1,5 @@
+@use 'variables/colors' as *;
 @use 'sass:list';
-
-$border-host: 5px solid #f01919;
-$color-grid-categories-title: #FF2500;
-$color-fa-icon: #FF2500;
-$border-bottom-categories-title: 3px solid #FF2500;
-$box-shadow-categories: 3px 3px 5px 1px #0000001f;
 
 $img-paths: (
             "../../../assets/categories/clothes/male/men's-shirt-img1.jpg",
@@ -18,7 +13,7 @@ $img-paths: (
 
 :host {
   --transtale-x: 0%;
-  background-color: #F5F5F5;
+  background-color: $bg-color-host;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -34,7 +29,7 @@ $img-paths: (
 
 .categories-title {
   background-color: white;
-  color: $color-grid-categories-title;
+  color: $color-title;
   margin-left: 30px;
   height: 50px;
   width: 210px;
@@ -161,7 +156,7 @@ $img-paths: (
   }
 
   fa-icon {
-    color: $color-fa-icon;
+    color: $color-title;
     font-size: 2.8em;
 
   }

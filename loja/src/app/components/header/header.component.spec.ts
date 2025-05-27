@@ -5,6 +5,7 @@ import { ResponsiveService } from '@services/responsive.service';
 
 import { Observable, of } from 'rxjs';
 import { BreakpointState } from '@angular/cdk/layout';
+import { provideRouter } from '@angular/router';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -27,7 +28,8 @@ describe('HeaderComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ HeaderComponent ],
       providers: [
-        { provide: ResponsiveService, useValue: mockResponsiveService }
+        { provide: ResponsiveService, useValue: mockResponsiveService },
+        provideRouter([])
 
       ]
 

@@ -1,33 +1,38 @@
-import { CommonModule } from '@angular/common';
 import {
   Component,
+  HostBinding,
   OnInit,
   OnDestroy,
-  HostBinding
+  AfterContentChecked
 
 } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Product } from '@models/products.model';
-import { ApiService } from '@services/api.service';
-import { ResponsiveService } from '@services/responsive.service';
 import { Subscription } from 'rxjs';
+import { ResponsiveService } from '@services/responsive.service';
+import {
+  RouterLink,
+  RouterModule
+
+} from '@angular/router';
+import { ProductsService } from '@services/products.service';
 
 @Component({
   selector: 'app-products',
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink,
+    RouterModule
 
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })
-export class ProductsComponent implements OnInit, OnDestroy {
+export class ProductsComponent implements OnInit, AfterContentChecked, OnDestroy {
   @HostBinding("style.--grid-template-columns-wrapper__products-products") grid_template_columns_wrapper__products_products!: string;
-  @HostBinding("style.--font-size-products-wrapper__h1-products") font_size_products_wrapper__h1_products!: string;
-  @HostBinding("style.--width-product-wrapper-products") width_product_wrapper_products!: string;
   @HostBinding("style.--height-product-wrapper__product-products") height_product_wrapper__product_products!: string;
   @HostBinding("style.--width-product-wrapper__product-products") width_product_wrapper__product_products!: string;
 
-  private products!: Array<Product>;
   protected products_info!: Array<Product[keyof Product]>;
   private qtd_products_shown!: number;
   protected showedAllProducts: boolean = false;
@@ -40,23 +45,15 @@ export class ProductsComponent implements OnInit, OnDestroy {
   private sub!: Subscription;
 
   constructor(
-    private api: ApiService,
+    private productsService: ProductsService,
     private responsive$: ResponsiveService
 
   ) {}
-
+  
   ngOnInit(): void {
-    this.api.requestApi().subscribe((data: Array<Product>) => {
-      this.products = data
-      this.showProducts(0);
-
-    });
-
     this.sub = this.responsive$.onBreakpointChange().subscribe((state) => {
       if (state.breakpoints[this.XSMALL]) {
         this.qtd_products_shown = 6;
-        this.width_product_wrapper_products = "390px";
-        this.font_size_products_wrapper__h1_products = "1.9em";
         this.grid_template_columns_wrapper__products_products = "repeat(2, 1fr)";
         this.height_product_wrapper__product_products = "250px";
         this.width_product_wrapper__product_products = "160px";
@@ -64,8 +61,6 @@ export class ProductsComponent implements OnInit, OnDestroy {
       }
       else if (state.breakpoints[this.SMALL]) {
         this.qtd_products_shown = 6;
-        this.width_product_wrapper_products = "520px";
-        this.font_size_products_wrapper__h1_products = "2em";
         this.grid_template_columns_wrapper__products_products = "repeat(2, 1fr)";
         this.height_product_wrapper__product_products = "300px";
         this.width_product_wrapper__product_products = "200px";
@@ -73,8 +68,6 @@ export class ProductsComponent implements OnInit, OnDestroy {
       }
       else if (state.breakpoints[this.MEDIUM]) {
         this.qtd_products_shown = 6;
-        this.width_product_wrapper_products = "580px";
-        this.font_size_products_wrapper__h1_products = "2.3em";
         this.grid_template_columns_wrapper__products_products = "repeat(2, 1fr)";
         this.height_product_wrapper__product_products = "300px";
         this.width_product_wrapper__product_products = "200px";
@@ -82,36 +75,36 @@ export class ProductsComponent implements OnInit, OnDestroy {
       }
       else if (state.breakpoints[this.LARGE]) {
         this.qtd_products_shown = 12;
-        this.width_product_wrapper_products = "826px";
-        this.font_size_products_wrapper__h1_products = "2.3em";
         this.grid_template_columns_wrapper__products_products = "repeat(3, 1fr)";
         this.height_product_wrapper__product_products = "300px";
         this.width_product_wrapper__product_products = "200px";
-
+        
       }
       else {
         this.qtd_products_shown = 12;
-        this.width_product_wrapper_products = "1000px";
-        this.font_size_products_wrapper__h1_products = "2.3em";
         this.grid_template_columns_wrapper__products_products = "repeat(4, 1fr)";
         this.height_product_wrapper__product_products = "300px";
         this.width_product_wrapper__product_products = "200px";
-
+        
       }
-    })
 
+    })
+    
+  }
+
+  ngAfterContentChecked(): void {
+    if (!this.products_info || this.products_info.length === 0) {
+      this.showProducts(0);
+
+    }
+      
   }
 
   private showProducts(increment: number): void {
-    const obj_products: Array<Product[keyof Product]> = Object.values(this.products[0]);
-
-    const len = obj_products.length;
-
-    this.qtd_products_shown = Math.min(this.qtd_products_shown + increment, len);
-
-    this.showedAllProducts = this.qtd_products_shown >= len;
-
-    this.products_info = obj_products.slice(0, this.qtd_products_shown);
+    const [ products, showedAllProducts ] = this.productsService.filterProductsByQuantity<Product[keyof Product]>(this.qtd_products_shown + increment);
+    this.products_info = products;
+    this.showedAllProducts = showedAllProducts;
+    this.qtd_products_shown += increment;
 
   }
 
