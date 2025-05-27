@@ -32,6 +32,17 @@
 
 }
 
+::-webkit-scrollbar {
+  background-color: #f0f0f0;
+  width: 12px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bd1c00;
+
+}
+
 * {
   margin: 0;
   padding: 0;
