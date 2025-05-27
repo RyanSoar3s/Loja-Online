@@ -1,0 +1,83 @@
+@if (product) {
+  <div [ngClass]="'product-viewer bg-color-white full-height flex space-evenly'">
+    <div [ngClass]="'product-viewer__product-img flex flex-direction-column'">
+      <img [ngClass]="'full-height full-width'" [src]="product.images[indexImg]" [alt]="'foto do produto'">
+      <div [ngClass]="'product-viewer__thumbnails full-width flex space-evenly'">
+        @for (img of product.images; let index = $index; track index) {
+          <div [attr.data-img]="'img-' + (index + 1)" [ngClass]="'product-viewer__thumbnail flex'" (mouseenter)="nextImage(index)">
+            <img [src]="img" [alt]="'foto do produto ' + (index + 1)">
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+    <div [ngClass]="'product-viewer__product-info full-width flex flex-direction-column '">
+      <div [ngClass]="'product-viewer__title margin-bottom-20px flex'">
+        <h1>{{ product.title }}</h1>
+
+      </div>
+
+      <div [ngClass]="'product-viewer__classify-product margin-bottom-20px flex'">
+        <span>4.9</span>
+        <div>
+          <fa-icon [icon]="faStar"></fa-icon>
+          <fa-icon [icon]="faStar"></fa-icon>
+          <fa-icon [icon]="faStar"></fa-icon>
+          <fa-icon [icon]="faStar"></fa-icon>
+          <fa-icon [icon]="faStar"></fa-icon>
+
+        </div>
+        <p>| <span>120</span>avaliações |</p>
+        <p><span>500</span>vendidos</p>
+
+      </div>
+
+      <div [ngClass]="'product-viewer__description margin-bottom-20px flex flex-direction-column space-evenly'">
+        <h2 [ngClass]="'margin-bottom-20px font-weight-500'">Descrição do produto</h2>
+        <p>{{ product.description }}</p>
+
+      </div>
+
+      <div [ngClass]="'product-viewer__price color-text flex flex-direction-column '">
+        <p>{{ product.price | currency: 'BRL' }}</p>
+
+      </div>
+
+      <div [ngClass]="'product-viewer__category flex'">
+        <h4>Categoria: <span ngClass="font-weight-500">{{ product.category }}</span></h4>
+
+      </div>
+
+      <div [ngClass]="'product-viewer__tags margin-bottom-20px flex'">
+        @for (tag of product.tags; track $index) {
+          <span [ngClass]="'product-viewer__tag flex'">{{ tag }}</span>
+
+        }
+      </div>
+
+      <div [ngClass]="'products-viewer__quantity margin-bottom-20px space-between flex'">
+        <p>Quantidade: </p>
+        <div [ngClass]="'flex space-between'">
+          <button ngClass="bg-color-white" (click)="decreaseQuantityProducts()" [disabled]="(quantityProducts === 1) ? true : false">-</button>
+          <span [ngClass]="'bg-color-white color-text font-weight-500 flex'">{{ quantityProducts }}</span>
+          <button ngClass="bg-color-white" (click)="increaseQuantityProducts()" [disabled]="(quantityProducts === 99) ? true : false">+</button>
+
+        </div>
+
+      </div>
+
+      <div [ngClass]="'product-viewer__actions margin-bottom-20px flex space-around'">
+        <button [ngClass]="'product-viewer__button-cart bg-color-white color-text flex'">Adicionar ao carrinho</button>
+        <button [ngClass]="'product-viewer__button-buy flex'">Comprar</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+}
