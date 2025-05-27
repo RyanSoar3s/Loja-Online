@@ -17,13 +17,15 @@ import {
 
 import { ResponsiveService } from '@services/responsive.service';
 import { Subscription } from 'rxjs';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterLink
 
   ],
   templateUrl: './header.component.html',
