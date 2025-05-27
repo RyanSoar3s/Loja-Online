@@ -16,11 +16,16 @@
 
 }
 
-.header-elements__title h1 {
-  color: white;
-  font-size: var(--font-size-h1-header);
-  font-weight: 800;
-  text-shadow: 2px 2px 2px #00000059;
+.header-elements__title {
+  cursor: pointer;
+
+  h1 {
+    color: white;
+    font-size: var(--font-size-h1-header);
+    font-weight: 800;
+    text-shadow: 2px 2px 2px #00000059;
+
+  }
 
 }
 
