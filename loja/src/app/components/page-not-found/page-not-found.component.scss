@@ -1,0 +1,46 @@
+@use 'variables/colors' as *;
+
+:host {
+  display: flex;
+  justify-content: center;
+  width: 100svw;
+  margin-top: 50px;
+  padding: 0px 20px;
+
+}
+
+.page-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 200px;
+  width: 442.52px;
+  text-align: center;
+
+  .page-not-found__button {
+    height: 40px;
+    width: 200px;
+
+    button {
+      background-color: white;
+      color: $color-text;
+      height: 100%;
+      width: 100%;
+      border: 2px solid $color-text;
+      border-radius: 10px;
+      font-size: 1.2em;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-text;
+        color: white;
+
+      }
+
+    }
+
+  }
+
+}
