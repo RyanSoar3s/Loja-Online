@@ -18,11 +18,17 @@
   --width-categories__img-categories: 170px;
   --width-categories__arrows-categories: 964.08px;
 
-  --width-product-wrapper-products: 1000px;
-  --font-size-products-wrapper__h1-products: 2.3em;
+  --width-product-wrapper-product-area: 1000px;
+  --font-size-products-wrapper__h1-product-area: 2.3em;
+
   --grid-template-columns-wrapper__products-products: repeat(4, 1fr);
   --height-product-wrapper__product-products: 300px;
   --width-product-wrapper__product-products: 200px;
+
+  --height-host-product-viewer: 1100px;
+  --width-product-viewer__product-img-product-viewer: 500px;
+  --flex-direction-product-viewer-product-viewer: row;
+  --width-product-viewer__tags-product-viewer: 32vw;
 
 }
 
@@ -39,6 +45,7 @@ html, body {
 }
 
 body {
+  background-color: #F5F5F5;
   font-family: 'Fira Sans', sans-serif;
   height: 100vh;
   width: 100vw;
