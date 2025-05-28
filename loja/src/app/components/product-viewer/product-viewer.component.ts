@@ -5,6 +5,7 @@ import {
   Renderer2,
   ElementRef,
   OnInit,
+  AfterViewInit,
   OnDestroy,
   HostBinding
 
@@ -28,7 +29,7 @@ import { ResponsiveService } from '@services/responsive.service';
   templateUrl: './product-viewer.component.html',
   styleUrl: './product-viewer.component.scss'
 })
-export class ProductViewerComponent implements OnInit, AfterContentChecked, OnDestroy {
+export class ProductViewerComponent implements OnInit, AfterContentChecked, AfterViewInit, OnDestroy {
   @HostBinding("style.--height-host-product-viewer") height_host_product_viewer!: string;
   @HostBinding("style.--flex-direction-product-viewer-product-viewer") flex_direction_product_viewer_product_viewer!: string;
   @HostBinding("style.--width-product-viewer__product-img-product-viewer") width_product_viewer__product_img_product_viewer!: string;
@@ -113,6 +114,11 @@ export class ProductViewerComponent implements OnInit, AfterContentChecked, OnDe
       this.product = this.products.filterProductByTitle<Product[keyof Product]>(title) as Product[keyof Product];
 
     }
+
+  }
+
+  ngAfterViewInit(): void {
+    document.body.scrollTop = 0;
 
   }
 
