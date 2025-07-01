@@ -37,8 +37,8 @@ Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/loja-online-angular.git
-   cd loja-online-angular
+   git clone https://github.com/RyanSoar3s/Loja-Online.git
+   cd Loja-Online
    ```
 2. Instale as dependências e execute o projeto:
    ```bash
