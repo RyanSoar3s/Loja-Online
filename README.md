@@ -27,7 +27,7 @@ Este projeto é uma loja online simples desenvolvida em Angular. Ele demonstra c
 
 ## Pré-Requisitos
 Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
-- Node.js (versão 14 ou superior)
+- Node.js (versão 22 ou superior)
 - Angular CLI
 - Navegador atualizado
 
