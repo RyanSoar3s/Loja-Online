@@ -49,3 +49,7 @@ Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
    ```bash
     http://localhost:4200
    ```
+
+## Licença:
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
